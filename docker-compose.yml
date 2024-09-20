@@ -1,9 +1,10 @@
 services:
-  server:
-    container_name: server
+  wppconnect-server:
+    container_name: wppconnect-server
     restart: unless-stopped
     build:
       context: .
+    image: wppconnect-server
     volumes:
       - ./src/config.ts:/usr/wpp-server/src/config.ts
       - ./tokens:/usr/wpp-server/tokens
