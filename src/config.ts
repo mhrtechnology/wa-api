@@ -49,7 +49,6 @@ export default {
     browserArgs: [
       '--disable-web-security',
       '--no-sandbox',
-      '--disable-web-security',
       '--aggressive-cache-discard',
       '--disable-cache',
       '--disable-application-cache',
@@ -68,7 +67,6 @@ export default {
       '--ignore-certificate-errors',
       '--ignore-ssl-errors',
       '--ignore-certificate-errors-spki-list',
-      //'--disable-features=LeakyPeeker'
     ],
     /**
      * Example of configuring the linkPreview generator
