@@ -6,7 +6,7 @@
     "**/*.http",
     "**/*.lock",
     "**/*.md",
-    "api-docs",
+    "docs",
     "log",
     "tokens",
     "WhatsAppImages"
