@@ -13,5 +13,12 @@ services:
       - data:/usr/wpp-server
     ports:
       - '21465:21465'
+    networks:
+      - wpp-network
+    tty: true
 volumes:
   data: {}
+networks:
+  wpp-network:
+    name: wpp-network
+    driver: bridge
