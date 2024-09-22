@@ -1,6 +1,13 @@
 .yarn
 *-lock.json
 *.lock
+*.bat
+dist
+log
+uploads
+WhatsAppImages
 node_modules
-!tokens/placeholder
-!usersData/placeholder
+tokens
+usersData
+src
+!*/placeholder
