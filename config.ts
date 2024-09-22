@@ -1,3 +1,5 @@
+import { ServerOptions } from './types/ServerOptions'
+
 export default {
 	secretKey: 'THISISMYSECRETKEY',
 	host: 'http://localhost',
@@ -103,4 +105,4 @@ export default {
 		region: '0' as any,
 		forcePathStyle: true,
 	},
-}
+} as unknown as ServerOptions;
