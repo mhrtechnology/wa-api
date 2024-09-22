@@ -1,5 +1,7 @@
 FROM node:lts-alpine AS base
-RUN apk add wget git chromium
+RUN apk update
+RUN apk add --no-cache vips-dev fftw-dev gcc g++ make libc6-compat wget git chromium
+RUN rm -rf /var/cache/apk/*
 
 FROM base AS backend
 RUN git clone https://github.com/mhrtechnology/wa-api.git --branch en --single-branch /home/node/wpp-server
