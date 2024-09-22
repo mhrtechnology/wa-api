@@ -6,7 +6,7 @@ WORKDIR /usr
 RUN apk add wget git chromium
 RUN git clone https://github.com/mhrtechnology/wa-api.git --branch en --single-branch /usr/wpp-server
 WORKDIR /usr/wpp-server
-COPY /src/config.ts /usr/wpp-server/src
+COPY ./config.ts /usr/wpp-server/src/config.ts
 RUN npm install
 RUN npm run build
 EXPOSE 21465
