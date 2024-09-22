@@ -7,10 +7,14 @@ services:
       context: .
     image: hafiziruslan/wppconnect-server:latest
     volumes:
-      - ./config.ts:/usr/wpp-server/src/config.ts
-      - ./tokens:/usr/wpp-server/tokens
-      - ./usersData:/usr/wpp-server/usersData
-      - data:/usr/wpp-server
+      - ./config.ts:/home/node/wpp-server/src/config.ts
+      - ./tokens:/home/node/wpp-server/tokens
+      - ./usersData:/home/node/wpp-server/usersData
+      - data:/home/node/wpp-server/log
+      - data:/home/node/wpp-server/tokens
+      - data:/home/node/wpp-server/usersData
+      - data:/home/node/wpp-server/uploads
+      - data:/home/node/wpp-server/WhatsAppImages
     ports:
       - '21465:21465'
     tty: true
