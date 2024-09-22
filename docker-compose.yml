@@ -2,7 +2,6 @@ services:
   server:
     container_name: server
     restart: unless-stopped
-    pull_policy: build
     build:
       context: .
     image: hafiziruslan/wppconnect-server:latest
