@@ -5,7 +5,7 @@ services:
     pull_policy: build
     build:
       context: .
-    image: wppconnect-server
+    image: hafiziruslan/wppconnect-server:latest
     volumes:
       - ./config.ts:/usr/wpp-server/src/config.ts
       - ./tokens:/usr/wpp-server/tokens
