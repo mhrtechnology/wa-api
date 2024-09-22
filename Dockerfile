@@ -7,8 +7,7 @@ RUN apk add wget git chromium
 RUN git clone https://github.com/mhrtechnology/wa-api.git --branch en --single-branch /usr/wpp-server
 WORKDIR /usr/wpp-server
 COPY /src/config.ts /usr/wpp-server/src
-RUN yarn set version latest
-RUN yarn install
-RUN yarn build
+RUN npm install
+RUN npm run build
 EXPOSE 21465
 ENTRYPOINT ["node", "dist/server.js"]
