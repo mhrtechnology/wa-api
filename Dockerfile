@@ -1,20 +1,14 @@
-FROM node:lts-alpine AS builder
+FROM node:lts-alpine
+LABEL version="2.7.0"
+LABEL org.opencontainers.image.authors="pizi@hotmail.my"
 ENV PORT=21465
+WORKDIR /usr
+RUN apk add wget git chromium
+RUN git clone https://github.com/mhrtechnology/wa-api.git --branch en --single-branch /usr/wpp-server
 WORKDIR /usr/wpp-server
-RUN apk add chromium
-COPY /src ./src
-COPY package.json ./
+COPY /src/config.ts /usr/wpp-server/src
+RUN yarn set version latest
 RUN yarn install
 RUN yarn build
-
-# FROM node:lts-alpine
-# WORKDIR /usr/wpp-server
-# ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
-# COPY package.json ./
-# RUN apk add chromium
-# COPY --from=builder /usr/wpp-server/ .
-
-LABEL org.opencontainers.image.authors="pizi@hotmail.my"
-LABEL version="2.7.0"
 EXPOSE 21465
 ENTRYPOINT ["node", "dist/server.js"]
