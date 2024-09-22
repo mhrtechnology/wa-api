@@ -49,8 +49,6 @@ export default {
 		browserArgs: [
 			'--disable-web-security',
 			'--no-sandbox',
-			'--disable-setuid-sandbox',
-			'--disable-gpu',
 			'--aggressive-cache-discard',
 			'--disable-cache',
 			'--disable-application-cache',
