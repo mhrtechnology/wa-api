@@ -1,6 +1,7 @@
-FROM node:lts-alpine
-ENV PORT=21465
-RUN apk add wget git
+FROM node:lts-alpine AS base
+RUN apk add wget git chromium
+
+FROM base AS backend
 RUN git clone https://github.com/mhrtechnology/wa-api.git --branch en --single-branch /usr/wpp-server
 WORKDIR /usr/wpp-server
 RUN npm install
