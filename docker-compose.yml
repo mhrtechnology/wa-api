@@ -10,11 +10,7 @@ services:
       - ./config.ts:/home/node/wpp-server/src/config.ts
       - ./tokens:/home/node/wpp-server/tokens
       - ./usersData:/home/node/wpp-server/usersData
-      - data:/home/node/wpp-server/log
-      - data:/home/node/wpp-server/tokens
-      - data:/home/node/wpp-server/usersData
-      - data:/home/node/wpp-server/uploads
-      - data:/home/node/wpp-server/WhatsAppImages
+      - data:/home/node/wpp-server
     ports:
       - '21465:21465'
     tty: true
