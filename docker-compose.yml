@@ -1,6 +1,6 @@
 services:
-  wppconnect-server:
-    container_name: wppconnect-server
+  server:
+    container_name: server
     restart: unless-stopped
     pull_policy: build
     build:
