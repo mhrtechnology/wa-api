@@ -7,7 +7,7 @@ services:
       context: .
     image: wppconnect-server
     volumes:
-      - ./src/config.ts:/usr/wpp-server/src/config.ts
+      - ./config.ts:/usr/wpp-server/src/config.ts
       - ./tokens:/usr/wpp-server/tokens
       - ./usersData:/usr/wpp-server/usersData
       - data:/usr/wpp-server
